@@ -6,7 +6,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R build
-status](https://github.com/th1460/appId/workflows/R-CMD-check/badge.svg)](https://github.com/th1460/appId/actions)
+status](https://github.com/ibm/AppIdR/workflows/R-CMD-check/badge.svg)](https://github.com/ibm/AppIdR/actions)
 <!-- badges: end -->
 
 The `AppIdR` is a package to get authentication with [App ID
@@ -48,7 +48,7 @@ You should too, create a `.Renviron` file with the credentials.
 ``` r
 require(shiny)
 require(shinydashboard)
-require(appId)
+require(AppIdR)
 
 ui <- dashboardPage(
   dashboardHeader(user_info(), # show user info
@@ -73,5 +73,5 @@ shinyAppId(ui, server)
 
 1.  Package using Auth0 service
     [curso-r/auth0](https://github.com/curso-r/auth0)
-2.  Sketch of Shiny + Oauth
+2.  Gist with Sketch of Shiny + Oauth
     [hadley/shiny-oauth.r](https://gist.github.com/hadley/144c406871768d0cbe66b0b810160528)

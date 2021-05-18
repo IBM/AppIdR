@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+name: R-CMD-check
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: r-lib/actions/setup-r@master
+      - name: Linux dependencies
+        run: |
+          sudo apt install libcurl4-gnutls-dev
+      - name: Install dependencies
+        run: |
+          Rscript -e 'install.packages(c("remotes", "rcmdcheck"))' \
+                  -e 'remotes::install_deps(dependencies = TRUE)'
+      - name: Check
+        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+        shell: Rscript {0}

@@ -1,0 +1,22 @@
+Package: AppIdR
+Title: Connect with App Id service from IBM
+Version: 0.1.0
+Authors@R: 
+    person(given = "Thiago",
+           family = "Pires",
+           role = c("aut", "cre"),
+           email = "thop100@hotmail.com")
+Description: Connect with App Id service from IBM.
+License: Apache License (== 2.0)
+Encoding: UTF-8
+LazyData: true
+Imports:
+  shiny,
+  httr,
+  magrittr,
+  yaml,
+  glue,
+  jsonlite,
+  openssl
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
